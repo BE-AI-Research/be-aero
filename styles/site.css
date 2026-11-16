@@ -385,8 +385,8 @@ select { font: 600 14px/1 var(--aero-font); color: var(--text); background: var(
 .mode p { color: var(--aero-text-dim); font-size: 14px; }
 @media (max-width: 900px) { .approuter { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .ar-exit input, .ar-exit input::after { transition: none; } }
-.ar-shot { justify-self: center; max-width: 340px; width: 100%; }
-.ar-shot .phone { padding: 7px; border-radius: 30px; }
-.ar-shot .phone img { border-radius: 23px; }
-.approuter { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
-@media (max-width: 900px) { .approuter { grid-template-columns: 1fr; } }
+.ar-shot { justify-self: center; align-self: start; width: 100%; max-width: 320px; }
+.ar-card { border-radius: 22px; overflow: hidden; border: 1px solid rgba(255, 255, 255, var(--glass-border)); box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.8); }
+.ar-card img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent); mask-image: linear-gradient(to bottom, #000 80%, transparent); }
+.approuter { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); }
+@media (max-width: 900px) { .approuter { grid-template-columns: 1fr; } .ar-shot { max-width: 280px; } }

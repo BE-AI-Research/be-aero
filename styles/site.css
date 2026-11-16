@@ -356,3 +356,37 @@ select { font: 600 14px/1 var(--aero-font); color: var(--text); background: var(
 .fshots figcaption { display: grid; gap: 2px; font-size: 13px; color: var(--aero-text-dim); }
 .fshots figcaption b { color: var(--text); font-size: 14px; font-weight: 600; }
 @media (max-width: 760px) { .fshots { grid-template-columns: 1fr; justify-items: center; } .fshots figure { max-width: 300px; } }
+
+/* ---- App-Router */
+.approuter { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 32px; align-items: start; padding-top: 28px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+.ar-panel { padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.ar-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.ar-top .aero-widget-title { margin: 0; }
+.ar-exit { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: var(--aero-text-dim); cursor: pointer; }
+.ar-exit input { appearance: none; -webkit-appearance: none; width: 36px; height: 20px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); position: relative; cursor: pointer; margin: 0; transition: background-color 0.15s ease; }
+.ar-exit input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform 0.15s ease; }
+.ar-exit input:checked { background: var(--accent); }
+.ar-exit input:checked::after { transform: translateX(16px); }
+.ar-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; align-items: center; padding: 10px 12px; border-radius: 12px; background: rgba(2, 6, 23, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); }
+.ar-row b { font-size: 14px; font-weight: 600; }
+.ar-route { grid-column: 1 / -1; font-size: 12px; color: var(--aero-text-dim); display: flex; align-items: center; gap: 8px; }
+.ar-route i { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--aero-text-faint); }
+.ar-route.home i { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.ar-route.direct i { background: var(--aero-warn); }
+.ar-route.lan i { background: var(--aero-ok); }
+.tri { display: inline-flex; gap: 2px; padding: 3px; border-radius: 10px; background: rgba(2, 6, 23, 0.6); border: 1px solid rgba(255, 255, 255, 0.14); }
+.tri button { font: 600 12px/1 var(--aero-font); color: var(--aero-text-dim); background: transparent; border: 0; padding: 7px 10px; border-radius: 7px; cursor: pointer; }
+.tri button[aria-pressed="true"][data-v="on"] { background: var(--accent); color: #04121d; }
+.tri button[aria-pressed="true"][data-v="default"] { background: rgba(255, 255, 255, 0.16); color: var(--text); }
+.tri button[aria-pressed="true"][data-v="off"] { background: rgba(251, 191, 36, 0.22); color: var(--aero-warn); }
+.modes { display: grid; gap: 10px; }
+.mode { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; align-items: start; }
+.mode .aero-chip { justify-self: start; }
+.mode p { color: var(--aero-text-dim); font-size: 14px; }
+@media (max-width: 900px) { .approuter { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .ar-exit input, .ar-exit input::after { transition: none; } }
+.ar-shot { justify-self: center; max-width: 340px; width: 100%; }
+.ar-shot .phone { padding: 7px; border-radius: 30px; }
+.ar-shot .phone img { border-radius: 23px; }
+.approuter { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+@media (max-width: 900px) { .approuter { grid-template-columns: 1fr; } }

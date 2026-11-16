@@ -527,6 +527,16 @@
           <p>Until it has been set up with root once, the hub waits in <strong>standby</strong>. Run <code>sudo be-aero-relay tunnel</code>, or open the panel with sudo and press <kbd class="aero-kbd">t</kbd>.</p>
         </article>
         <article class="topic aero-glass">
+          <h3 class="aero-h3">App-Router: per-app VPN control</h3>
+          <p>On the phone, App-Router gives every installed app its own VPN setting. Every app starts on Default. Use <strong>Find an app</strong> to jump to one.</p>
+          <ul>
+            <li><strong>Off:</strong> the app never uses the VPN. It goes straight to the internet and cannot reach your home network through the tunnel.</li>
+            <li><strong>Default:</strong> as the VPN is set. Your devices and home network go through the tunnel, or everything when the exit node is on.</li>
+            <li><strong>Always:</strong> away from home, all of the app's internet goes through home.</li>
+          </ul>
+          <p>Use it to keep untrusted apps away from your home network, or to make sure one app always goes through home.</p>
+        </article>
+        <article class="topic aero-glass">
           <h3 class="aero-h3">Reaching it away from home</h3>
           <p>Forward TCP 41811 on your router to the relay, or put the relay and your devices on the same VPN.</p>
         </article>
